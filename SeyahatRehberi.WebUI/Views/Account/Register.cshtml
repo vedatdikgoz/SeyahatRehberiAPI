@@ -1,0 +1,28 @@
+﻿@model UserRegisterModel
+@{
+    ViewBag.Title = "Kullanıcı Kayıt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form asp-action="Register" asp-controller="Account" method="post" class="mt-4 w-50 mx-auto p-3 shadow">
+    <div class="form-group">
+        <input asp-for="FirstName" class="form-control" type="text" placeholder="Ad" />
+    </div>
+    <br />
+    <div class="form-group">
+        <input asp-for="LastName" class="form-control" type="text" placeholder="Soyad" />
+    </div>
+    <br />
+    <div class="form-group">
+        <input asp-for="Email" class="form-control" type="text" placeholder="Email" />
+    </div>
+    <br />
+    <div class="form-group">
+        <input asp-for="Password" class="form-control" type="password" placeholder="Şifre" />
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-block">Kaydet</button>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+﻿@model ArticleResponseModel
+@{
+    ViewBag.Title = "Makaleler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+<div class="container">
+    <div class="row">
+        @foreach (var article in Model.Data)
+        {
+            <div class="col-sm-3 mb-4" >
+                <div class="card" style="width: 16rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@article.ArticleName</h5>
+                        <p class="card-text">@article.ArticleContent</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">@article.Author</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-sm">Detaylar</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        @article.CreatedDate.ToShortDateString()
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

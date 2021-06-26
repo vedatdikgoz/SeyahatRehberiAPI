@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeyahatRehberi.Business", "SeyahatRehberi.Business\SeyahatRehberi.Business.csproj", "{67513105-EA12-4347-BE66-F1C6F54A6EE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeyahatRehberi.DataAccess", "SeyahatRehberi.DataAccess\SeyahatRehberi.DataAccess.csproj", "{A783A45C-D16E-4CDB-8A30-D59F84C4E5A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeyahatRehberi.Entities", "SeyahatRehberi.Entites\SeyahatRehberi.Entities.csproj", "{EEE2C82A-1EE6-42BB-B3CE-5A6F7395B525}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeyahatRehberi.Core", "SeyahatRehberi.Core\SeyahatRehberi.Core.csproj", "{179A0206-9DE1-47F2-8BB4-729DCF04EB4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeyahatRehberi.WebAPI", "SeyahatRehberi.WebAPI\SeyahatRehberi.WebAPI.csproj", "{78189702-7193-4CF4-ACC7-A75BD9E86884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeyahatRehberi.WebUI", "SeyahatRehberi.WebUI\SeyahatRehberi.WebUI.csproj", "{EDA1CCA4-3A21-44B1-96A0-371F09D4EC3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67513105-EA12-4347-BE66-F1C6F54A6EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67513105-EA12-4347-BE66-F1C6F54A6EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67513105-EA12-4347-BE66-F1C6F54A6EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67513105-EA12-4347-BE66-F1C6F54A6EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A783A45C-D16E-4CDB-8A30-D59F84C4E5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A783A45C-D16E-4CDB-8A30-D59F84C4E5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A783A45C-D16E-4CDB-8A30-D59F84C4E5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A783A45C-D16E-4CDB-8A30-D59F84C4E5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE2C82A-1EE6-42BB-B3CE-5A6F7395B525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE2C82A-1EE6-42BB-B3CE-5A6F7395B525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE2C82A-1EE6-42BB-B3CE-5A6F7395B525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE2C82A-1EE6-42BB-B3CE-5A6F7395B525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179A0206-9DE1-47F2-8BB4-729DCF04EB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179A0206-9DE1-47F2-8BB4-729DCF04EB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179A0206-9DE1-47F2-8BB4-729DCF04EB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179A0206-9DE1-47F2-8BB4-729DCF04EB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78189702-7193-4CF4-ACC7-A75BD9E86884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78189702-7193-4CF4-ACC7-A75BD9E86884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78189702-7193-4CF4-ACC7-A75BD9E86884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78189702-7193-4CF4-ACC7-A75BD9E86884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA1CCA4-3A21-44B1-96A0-371F09D4EC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA1CCA4-3A21-44B1-96A0-371F09D4EC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA1CCA4-3A21-44B1-96A0-371F09D4EC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA1CCA4-3A21-44B1-96A0-371F09D4EC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D8E52D6-C739-4E45-A94B-384597B17CB7}
+	EndGlobalSection
+EndGlobal

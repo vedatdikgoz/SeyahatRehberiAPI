@@ -1,0 +1,134 @@
+﻿@model CityResponseModel
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+        color: #125699
+    }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+
+
+    .content {
+        display: flex;
+        margin: 82px auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 32px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 32px;
+    display: flex;
+      justify-content: center;
+    align-items:center;
+    transition: all 0.2s ease-in-out;
+    line-height: 32px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 32px;
+    width: 150px;
+      
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+  a:hover {
+    color: #125699;
+  }
+
+</style>
+
+
+
+<div class="content" role="main">
+
+
+    <div class="card-container">
+    @foreach (var city in Model.Data)
+    {
+        <div class="card card-small">
+            <h3>@city.PlateCode </h3>
+            <a asp-controller="Home" asp-action="Articles" asp-route-cityId="@city.CityId"><b>@city.CityName</b></a>
+        
+        </div>
+    }
+
+    </div>
+
+</div>
+
