@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeyahatRehberi.DataAccess.Concrete.Context;
 
 namespace SeyahatRehberi.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210627202321_DefaultInitial")]
+    partial class DefaultInitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,17 +103,10 @@ namespace SeyahatRehberi.DataAccess.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("ArticleId");
-
-                    b.HasIndex("CityId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Articles");
                 });
@@ -132,25 +127,6 @@ namespace SeyahatRehberi.DataAccess.Migrations
                     b.HasKey("CityId");
 
                     b.ToTable("Cities");
-                });
-
-            modelBuilder.Entity("SeyahatRehberi.Entities.Concrete.Article", b =>
-                {
-                    b.HasOne("SeyahatRehberi.Entities.Concrete.City", "City")
-                        .WithMany()
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SeyahatRehberi.Core.Entities.Concrete.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("City");
-
-                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

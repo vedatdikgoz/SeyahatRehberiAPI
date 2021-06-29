@@ -17,5 +17,6 @@ namespace SeyahatRehberi.Business.Abstract
         IDataResult<Article> GetById(int articleId);
         IResult Add(Article article);
         IResult Update(Article article);
+        IResult Delete(Article article);
     }
 }

@@ -5,6 +5,8 @@ namespace SeyahatRehberi.Business.Constants
     public static class Messages
     {
         public static string ArticleAdded = "Makale eklendi";
+        public static string ArticleUpdated = "Makale güncellendi";
+        public static string ArticleDeleted = "Makale silindi";
         public static string ArticleNameInvalid = "Makale ismi geçersiz";
         public static string ArticlesListed ="Makaleler listelendi";
         public static string ArticleNameAlreadyExists="Bu isimde zaten başka bir makale var";
@@ -21,5 +23,7 @@ namespace SeyahatRehberi.Business.Constants
         public static string CityAdded = "Şehir eklendi";
         public static string CityNameAlreadyExists = "Bu isimde zaten başka bir şehir var";
 
+        public static string FailedToLoad = "Makale yükleme başarısız oldu";
+        public static string FailedToUpdated = "Makale güncelleme başarısız oldu";
     }
 }

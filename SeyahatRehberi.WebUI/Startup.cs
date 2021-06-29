@@ -36,6 +36,7 @@ namespace SeyahatRehberi.WebUI
             services.AddHttpClient<IAuthApiService, AuthApiManager>();
             services.AddHttpClient<IArticleApiService, ArticleApiManager>();
             services.AddHttpClient<ICityApiService, CityApiManager>();
+            services.AddHttpClient<IPhotoApiService, PhotoApiManager>();
 
 
         }

@@ -33,7 +33,9 @@ namespace SeyahatRehberi.Business.Concrete
         public IDataResult<List<Article>> GetAllByCityId(int id)
         {
             return new SuccessDataResult<List<Article>>(_articleRepository.GetAll(p => p.CityId == id));
+            
         }
+        
 
         public IDataResult<List<ArticleDetailDto>> GetArticleDetails()
         {
@@ -63,12 +65,36 @@ namespace SeyahatRehberi.Business.Concrete
         }
 
 
-        
+        [SecuredOperation("admin")]
         public IResult Update(Article article)
         {
-            throw new NotImplementedException();
+            IResult result = BusinessRules.Run();
+
+            if (result != null)
+            {
+                return result;
+            }
+
+            _articleRepository.Update(article);
+
+            return new SuccessResult(Messages.ArticleUpdated);
         }
 
+
+        [SecuredOperation("admin")]
+        public IResult Delete(Article article)
+        {
+            IResult result = BusinessRules.Run();
+
+            if (result != null)
+            {
+                return result;
+            }
+
+            _articleRepository.Delete(article);
+
+            return new SuccessResult(Messages.ArticleDeleted);
+        }
 
 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SeyahatRehberi.Core.Entities;
+using SeyahatRehberi.Entities.Concrete;
 
 namespace SeyahatRehberi.Entities.DTOs
 {

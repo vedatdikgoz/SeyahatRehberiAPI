@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 
 namespace SeyahatRehberi.Core.Entities.Concrete
 {
@@ -11,6 +12,6 @@ namespace SeyahatRehberi.Core.Entities.Concrete
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
         public bool Status { get; set; }
-        
+
     }
 }
