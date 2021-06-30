@@ -13,6 +13,7 @@ namespace SeyahatRehberi.Business.Abstract
     {
         IDataResult<List<Article>> GetAll();
         IDataResult<List<Article>> GetAllByCityId(int id);
+        IDataResult<List<Article>> GetAllByUserId(int id);
         IDataResult<List<ArticleDetailDto>> GetArticleDetails();
         IDataResult<Article> GetById(int articleId);
         IResult Add(Article article);

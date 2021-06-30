@@ -9,7 +9,13 @@ namespace SeyahatRehberi.WebUI.Services.Abstract
 {
     public interface IArticleApiService
     {
-        Task<ArticleResponseModel> GetAllAsync();
-        Task<ArticleResponseModel> GetAllByCityAsync(int cityId);
+        Task<ArticlesResponseModel> GetAllAsync();
+        Task<ArticlesResponseModel> GetAllByCityAsync(int cityId);
+        Task<ArticlesResponseModel> GetAllByUserAsync(int userId);
+        Task<ArticleResponseModel> GetByIdAsync(int articleId);
+        Task AddAsync(ArticleAddModel model);
+        Task UpdateAsync(ArticleUpdateModel model);
+        Task DeleteAsync(int id);
+
     }
 }

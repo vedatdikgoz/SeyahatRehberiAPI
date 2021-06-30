@@ -43,7 +43,7 @@ namespace SeyahatRehberi.Business.Concrete
 
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
-            var userToCheck = _userService.GetByMail(userForLoginDto.Email);
+            var userToCheck = _userService.FindByMail(userForLoginDto.Email);
             if (userToCheck == null)
             {
                 return new ErrorDataResult<User>(Messages.NotFoundUser);
@@ -59,7 +59,7 @@ namespace SeyahatRehberi.Business.Concrete
 
         public IResult UserExists(string email)
         {
-            if (_userService.GetByMail(email) != null)
+            if (_userService.FindByMail(email) != null)
             {
                 return new ErrorResult(Messages.UserExists);
             }

@@ -5,8 +5,10 @@
   "devDependencies": {},
   "dependencies": {
     "bootstrap": "^5.0.1",
+    "font-awesome": "^2.7.0",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
-    "jquery-validation-unobtrusive": "^3.2.12"
+    "jquery-validation-unobtrusive": "^3.2.12",
+    "trumbowyg": "^2.24.0"
   }
 }

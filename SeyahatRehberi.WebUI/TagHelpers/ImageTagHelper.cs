@@ -6,7 +6,7 @@ using SeyahatRehberi.WebUI.Services.Abstract;
 
 namespace SeyahatRehberi.WebUI.TagHelpers
 {
-    [HtmlTargetElement("getblogimage")]
+    [HtmlTargetElement("getarticleimage")]
     public class ImageTagHelper:TagHelper
     {
         private readonly IPhotoApiService _photoApiService;

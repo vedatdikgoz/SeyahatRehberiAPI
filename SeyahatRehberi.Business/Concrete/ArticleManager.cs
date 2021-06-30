@@ -35,7 +35,14 @@ namespace SeyahatRehberi.Business.Concrete
             return new SuccessDataResult<List<Article>>(_articleRepository.GetAll(p => p.CityId == id));
             
         }
-        
+
+
+        public IDataResult<List<Article>> GetAllByUserId(int id)
+        {
+            return new SuccessDataResult<List<Article>>(_articleRepository.GetAll(p => p.UserId == id));
+
+        }
+
 
         public IDataResult<List<ArticleDetailDto>> GetArticleDetails()
         {

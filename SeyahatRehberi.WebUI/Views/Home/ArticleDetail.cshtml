@@ -1,0 +1,28 @@
+﻿@model ArticleResponseModel
+@{
+    ViewBag.Title = "Makale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="mt-4">@Model.Data.ArticleName</h1>
+
+
+<p class="lead">
+        by
+        <p>@Model.Data.Author</p>
+    </p>
+
+<hr>
+
+
+<p>Posted on @Model.Data.CreatedDate</p>
+
+<hr>
+
+
+<getarticleimage id="@Model.Data.ArticleId" article-image-type="@ArticleImageType.ArticleDetail"></getarticleimage>
+
+<hr>
+
+<!-- Post Content -->
+@Html.Raw(Model.Data.ArticleContent)
