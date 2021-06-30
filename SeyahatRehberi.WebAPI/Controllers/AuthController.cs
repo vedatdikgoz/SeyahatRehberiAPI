@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using SeyahatRehberi.Business.Abstract;
 using SeyahatRehberi.Entities.DTOs;
 
@@ -14,10 +16,12 @@ namespace SeyahatRehberi.WebAPI.Controllers
     public class AuthController : ControllerBase
     {
         private IAuthService _authService;
+        private IUserService _userService;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, IUserService userService)
         {
             _authService = authService;
+            _userService = userService;
         }
 
         [HttpPost("login")]
@@ -56,5 +60,15 @@ namespace SeyahatRehberi.WebAPI.Controllers
 
             return BadRequest(result.Message);
         }
+
+        [HttpGet("activeUser")]
+        [Authorize]
+        public IActionResult ActiveUser()
+        {
+            var user =  _userService.FindByName(User.Identity.Name);
+
+            return Ok(new UserDto { Id = user.Id, FirstName = user.FirstName, LastName = user.LastName });
+        }
+
     }
 }

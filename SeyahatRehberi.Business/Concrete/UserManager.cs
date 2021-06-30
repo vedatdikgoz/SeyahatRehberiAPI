@@ -28,9 +28,15 @@ namespace SeyahatRehberi.Business.Concrete
             _userRepository.Add(user);
         }
 
-        public User GetByMail(string email)
+        public User FindByMail(string email)
         {
             return _userRepository.Get(u => u.Email == email);
         }
+
+        public User FindByName(string name)
+        {
+            return _userRepository.Get(u => u.FirstName +" "+u.LastName== name);
+        }
+
     }
 }

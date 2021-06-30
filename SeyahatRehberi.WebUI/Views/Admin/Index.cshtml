@@ -1,14 +1,14 @@
 ﻿@model ArticlesResponseModel
 @{
     ViewBag.Title = "Makaleler";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br/>
+<br />
 <div class="container">
     <div class="row">
         @foreach (var article in Model.Data)
         {
-            <div class="col-sm-3 mb-4" >
+            <div class="col-sm-3 mb-4">
                 <div class="card" style="width: 16rem;">
                     <getblogimage id="@article.ArticleId"></getblogimage>
                     <div class="card-body">
@@ -20,6 +20,8 @@
                     </ul>
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-sm">Detaylar</a>
+                        <a asp-controller="Admin" asp-action="UpdateArticle" asp-route-id="@article.ArticleId" class="btn btn-primary btn-sm">Güncelle</a>
+                        <a asp-controller="Admin" asp-action="DeleteArticle" asp-route-id="@article.ArticleId" class="btn btn-danger btn-sm"><i class="fa fa-minus-square"></i></a>
                     </div>
                     <div class="card-footer text-muted">
                         @article.CreatedDate.ToShortDateString()

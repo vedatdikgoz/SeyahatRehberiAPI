@@ -119,21 +119,22 @@ namespace SeyahatRehberi.WebAPI.Controllers
             var uploadModel =  UploadFile(articleUpdateModel.Image, "image/jpeg");
             if (uploadModel.UploadState == UploadState.Success)
             {
-                var updatedArticle =  _articleService.GetById(articleUpdateModel.ArticleId);
-                updatedArticle.Data.ArticleName = articleUpdateModel.ArticleName;
-                updatedArticle.Data.ArticleContent = articleUpdateModel.ArticleContent;
-                updatedArticle.Data.ImagePath = uploadModel.NewName;
-                 _articleService.Update(_mapper.Map<Article>(updatedArticle));
+                var updatedArticle =  _articleService.GetById(articleUpdateModel.ArticleId).Data;
+                updatedArticle.ArticleName = articleUpdateModel.ArticleName;
+                updatedArticle.ArticleContent = articleUpdateModel.ArticleContent;
+                updatedArticle.ImagePath = uploadModel.NewName;
+                _articleService.Update(_mapper.Map<Article>(updatedArticle));
                 return NoContent();
+                
             }
             else if (uploadModel.UploadState == UploadState.NotExist)
             {
-                var updatedArticle =  _articleService.GetById(articleUpdateModel.ArticleId);
-                updatedArticle.Data.ArticleName = articleUpdateModel.ArticleName;
-                updatedArticle.Data.ArticleContent = articleUpdateModel.ArticleContent;
-
-                _articleService.Update(_mapper.Map<Article>(updatedArticle));
+                var updatedArticle =  _articleService.GetById(articleUpdateModel.ArticleId).Data;
+                updatedArticle.ArticleName = articleUpdateModel.ArticleName;
+                updatedArticle.ArticleContent = articleUpdateModel.ArticleContent;
+                _articleService.Update(_mapper.Map<Article>(updatedArticle));                 
                 return NoContent();
+                
             }
             else
             {
